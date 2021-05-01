@@ -9,6 +9,8 @@ public class Main {
         for (Osoba person : osoba) {
             if (person instanceof Pracownik) {
                 ((Pracownik)person).pobierzOpis();
+            } else if(person instanceof Student) {
+                ((Student)person).pobierzOpis();
             } else {
                 break;
             }
