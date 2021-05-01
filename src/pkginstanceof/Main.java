@@ -5,10 +5,9 @@ public class Main {
         Osoba[] osoba = new Osoba[10];
         osoba[0] = new Pracownik("Jan", "Zalesiński", 2300);
         osoba[1] = new Student("Joanna", "Wolff");
-        osoba[0].pobierzOpis();
-        osoba[1].pobierzOpis();
-        for (Osoba person:osoba) {
-            if (person instanceof Osoba) {
+        osoba[2] = new Pracownik("Ola","Olechnowicz",4000);
+        for (Osoba person : osoba) {
+            if (person instanceof Pracownik) {
                 ((Pracownik)person).pobierzOpis();
             } else {
                 break;
@@ -45,8 +44,8 @@ class Pracownik extends Osoba {
         System.out.println("Nazwisko " + nazwisko);
         System.out.println("Wynagrodzenie " + wynagrodzenie + "zł");
     }
-    void pracuj()
-    {
+
+    void pracuj() {
         System.out.println("Ja pracuję");
     }
 }
