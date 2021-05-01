@@ -9,7 +9,7 @@ public class Main {
         osoba[1].pobierzOpis();
         for (Osoba person:osoba) {
             if (person instanceof Osoba) {
-                person.pobierzOpis();
+                ((Pracownik)person).pobierzOpis();
             } else {
                 break;
             }
@@ -44,6 +44,10 @@ class Pracownik extends Osoba {
         System.out.println("Imię " + imie);
         System.out.println("Nazwisko " + nazwisko);
         System.out.println("Wynagrodzenie " + wynagrodzenie + "zł");
+    }
+    void pracuj()
+    {
+        System.out.println("Ja pracuję");
     }
 }
 
