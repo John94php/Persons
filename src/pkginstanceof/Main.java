@@ -9,8 +9,10 @@ public class Main {
         for (Osoba person : osoba) {
             if (person instanceof Pracownik) {
                 ((Pracownik)person).pobierzOpis();
+                ((Pracownik)person).pracuj();
             } else if(person instanceof Student) {
                 ((Student)person).pobierzOpis();
+                ((Student)person).studiuj();
             } else {
                 break;
             }
@@ -62,5 +64,8 @@ class Student extends Osoba {
         System.out.println("Jestem studentem");
         System.out.println("Imię " + imie);
         System.out.println("Nazwisko " + nazwisko);
+    }
+    void studiuj() {
+        System.out.println("Studiuję");
     }
 }
